@@ -1,26 +1,36 @@
 <html>
 <head>
 <style>
+body {
+    text-align :center;
+    margin-top: 50px ;
+    font-size:21px;
+    background-color: aqua;
+}
 
-    body {
-        text-align: center;
-        margin-top: 50px;
-        font-size: 25px;
-        background-color: darkslategrey;
+h1 {
+    color: crimson;
 
-    }
+}
 
-    h1 {
-        color: skyblue;
-    }
+h5{
+    color:maroon;
+    background-color: burlywood;
+}
 
+input[type="submit"] {
+    background-color: darkmagenta;
+    padding:5px;
+    margin:2px;
+    color:black;
+}
 </style>
 </head>
 
 <!--##NO predefine-->
 <body>
     <h1>Advance Calculator!</h1>  <br>
-    <img width="20%" height="20%" src="{{url_for('static', filename='img.png') }} " />
+    <img width="20%" height="20%" src="{{url_for('static', filename='img.png') }} " /> <br> <br>
     <form method="POST">
         <label >Enter expression</label><br><br>
         <select class="is-focused is-large" name="operation" aria-label="operationDropdown">
@@ -33,6 +43,7 @@
 </form>
 
 
-    <p>Your equation is {{equation}} = {{ result }}</p>
+    <p style="font-size:21px; font-weight: bold;"> Your equation is {{equation}} = {{ result }}</p> <br> <br> <br>
+    <footer> <h5> Created by Anjali Menon</h5> </footer>
 </body>
 </html>
